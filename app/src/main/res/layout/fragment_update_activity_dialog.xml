@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zinc_800"
+    android:padding="@dimen/md_16dp"
+    tools:context=".ui.UpdateActivityDialogFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alterar_atividade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llUpdateActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/xm_32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sm_8dp"
+            app:startIconDrawable="@drawable/ic_tag"
+            app:boxBackgroundColor="@color/zinc_950"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eActivityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Jantar"
+                android:inputType="textCapSentences"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutActivityDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sm_8dp"
+            app:boxBackgroundColor="@color/zinc_950"
+            app:startIconDrawable="@drawable/ic_calendar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etActivityDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                tools:text="20 de agosto" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutActivityTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sm_8dp"
+            app:boxBackgroundColor="@color/zinc_950"
+            app:startIconDrawable="@drawable/ic_clock">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etActivityTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                tools:text="18:10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvDeleteActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/md_16dp"
+            android:text="@string/excluir_atividade"
+            android:textAlignment="center"
+            android:textColor="@color/zinc_500"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUpdateActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_16dp"
+        android:textColor="@color/lime_950"
+        android:text="@string/salvar_atividade"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:backgroundTint="@color/lime_300"
+        app:layout_constraintTop_toBottomOf="@id/llUpdateActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
